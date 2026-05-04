@@ -45,23 +45,22 @@
       }
     }
   </script>
+
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="font-cairo text-slate-800 overflow-x-hidden">
 
-  <!-- Top glow -->
   <div class="fixed inset-0 -z-10 pointer-events-none">
     <div class="absolute top-10 right-10 w-80 h-80 bg-orange-300/20 blur-3xl rounded-full animate-pulseSoft"></div>
     <div class="absolute top-1/3 left-0 w-72 h-72 bg-emerald-300/10 blur-3xl rounded-full animate-floaty"></div>
   </div>
 
-  <!-- Header -->
   <header class="sticky top-0 z-50 border-b border-orange-100/70 glass">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-4">
         <a href="#home" class="flex items-center gap-3 group">
-          <img src="imgs/logo.jpg" class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 via-amber-400 to-orange-300 flex items-center justify-center shadow-glow text-white text-2xl group-hover:scale-105 transition">
+          <img src="imgs/logo.jpg" alt="أسوانية" class="w-12 h-12 rounded-2xl shadow-glow object-cover group-hover:scale-105 transition">
           <div>
             <h1 class="text-xl font-extrabold text-slate-900 leading-none">أسوانية</h1>
             <p class="text-sm text-slate-500">من قلب أسوان لحد بيتك</p>
@@ -75,15 +74,21 @@
           <a href="#contact" class="hover:text-orange-600 transition">تواصل</a>
         </nav>
 
-        <a href="#products" class="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-5 py-3 text-sm font-bold shadow-soft hover:-translate-y-0.5 hover:bg-slate-800 transition">
-          اطلب الآن
-          <span>→</span>
-        </a>
+        <div class="flex items-center gap-3">
+          <a href="en.html" class="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-soft hover:border-orange-300 hover:text-orange-700 transition">
+            EN
+            <span>🌐</span>
+          </a>
+
+          <a href="#products" class="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-5 py-3 text-sm font-bold shadow-soft hover:-translate-y-0.5 hover:bg-slate-800 transition">
+            اطلب الآن
+            <span>→</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
   <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20">
     <div class="grid lg:grid-cols-2 gap-14 items-center">
       <div class="reveal">
@@ -94,9 +99,7 @@
 
         <h2 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.05] tracking-tight">
           من قلب
-          <span class="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-400 bg-clip-text text-transparent">
-            أسوان
-          </span>
+          <span class="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-400 bg-clip-text text-transparent">أسوان</span>
           لحد بيتك
         </h2>
 
@@ -150,7 +153,6 @@
             <div class="mt-6 grid sm:grid-cols-2 gap-4">
               <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
                 <div class="w-11 h-11 rounded-2xl bg-orange-100 flex items-center justify-center mb-3">
-                  <!-- Date Icon -->
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-orange-600">
                     <path d="M8 2v3M16 2v3M3 9h18M5 5h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                   </svg>
@@ -161,7 +163,6 @@
 
               <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
                 <div class="w-11 h-11 rounded-2xl bg-amber-100 flex items-center justify-center mb-3">
-                  <!-- Leaf Icon -->
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-amber-600">
                     <path d="M20 4c-7 0-13 3-13 10 0 4 3 6 6 6 7 0 10-6 10-13 0-1.1-.9-2-2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                     <path d="M8 16c2-1 5-4 7-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -173,7 +174,6 @@
 
               <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
                 <div class="w-11 h-11 rounded-2xl bg-green-100 flex items-center justify-center mb-3">
-                  <!-- Sparkles Icon -->
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-green-600">
                     <path d="M12 2l1.2 4.8L18 8l-4.8 1.2L12 14l-1.2-4.8L6 8l4.8-1.2L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                     <path d="M19 13l.7 2.3L22 16l-2.3.7L19 19l-.7-2.3L16 16l2.3-.7L19 13Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -185,7 +185,6 @@
 
               <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
                 <div class="w-11 h-11 rounded-2xl bg-red-100 flex items-center justify-center mb-3">
-                  <!-- Cooking Pot Icon -->
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-red-600">
                     <path d="M7 10h10l-1 10H8L7 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                     <path d="M6 10h12M8 6h8M10 6V4m4 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -201,7 +200,6 @@
     </div>
   </section>
 
-  <!-- Products -->
   <section id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 reveal">
       <div>
@@ -214,7 +212,6 @@
     </div>
 
     <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-      <!-- Card -->
       <article class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition duration-300">
         <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center mb-4">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="text-orange-600">
@@ -274,7 +271,6 @@
     </div>
   </section>
 
-  <!-- Story -->
   <section id="story" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="grid lg:grid-cols-2 gap-8 items-stretch">
       <div class="reveal bg-white rounded-[2rem] p-8 shadow-soft border border-orange-100 card-border">
@@ -282,6 +278,18 @@
         <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">
           منتجات أصيلة من قلب أسوان
         </h3>
+
+        <div class="mt-6 rounded-2xl bg-orange-50 p-5 border border-orange-100 text-slate-700 leading-8 text-lg">
+          أسوانية… حكاية اتولدت في قلب أسوان 🌴<br><br>
+          سيدات قررن يحوّلوا بيوتهم لمصدر رزق ، ويصنعوا بإيديهم منتجات طبيعية مليانة حب وشغف 💛<br>
+          في أسوانية، إحنا مش بنقدّم منتجات وبس…<br>
+          إحنا بنقدّم قصة كفاح، أصالة حقيقية، وجودة بتتلمس في كل تفصيلة<br><br>
+          كل منتج وراه إيد ست قوية…<br>
+          وحلم بيكبر يوم بعد يوم 👑✨<br><br>
+          اختيارك لأسوانية مش مجرد شراء…<br>
+          ده مشاركة في حكاية نجاح، ودعم لسيدة بتبني مستقبلها بإيديها 🧕👑
+        </div>
+
         <p class="mt-6 text-slate-600 leading-8 text-lg">
           أسوانية🧡 مشروع بيقدّم منتجات رمضانية ومأكولات مختارة بعناية، مصنوعة بحب وإتقان بأيدي سيدات أسوان.
           هدفنا نوصل الجودة والطعم الأصيل لحد باب البيت بشكل بسيط وسريع.
@@ -321,7 +329,6 @@
     </div>
   </section>
 
-  <!-- How to order -->
   <section id="how" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
     <div class="text-center mb-10 reveal">
       <p class="text-orange-600 font-bold">طريقة الطلب</p>
@@ -349,7 +356,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
     <div class="rounded-[2rem] bg-slate-950 text-white p-8 md:p-12 shadow-glow overflow-hidden relative card-border">
       <div class="absolute -left-16 -top-16 w-48 h-48 bg-orange-500/20 rounded-full blur-3xl"></div>
@@ -375,14 +381,12 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="border-t border-orange-100 bg-white/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
       <p class="text-slate-600">© <span id="year"></span> أسوانية🧡 — من قلب أسوان لحد بيتك</p>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp -->
   <button onclick="openWhatsApp('مرحبًا، أريد الاستفسار عن منتجات أسوانية.')" 
           class="fixed bottom-5 left-5 z-50 w-14 h-14 rounded-full bg-green-500 text-white shadow-lg flex items-center justify-center hover:scale-110 transition animate-pulseSoft"
           aria-label="WhatsApp">
@@ -393,22 +397,19 @@
   </button>
 
   <script>
-    const phoneNumber = "+201090133710";
+    const phoneNumber = "201090133710";
 
     function openWhatsApp(message) {
       const encodedMessage = encodeURIComponent(message);
       const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-      window.open(url, "_blank");
+      window.open(url, "_blank", "noopener,noreferrer");
     }
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Scroll reveal animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("visible");
       });
     }, { threshold: 0.12 });
 

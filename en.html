@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aswania | From Aswan to Your Home</title>
+  <meta name="description" content="Aswania — authentic Ramadan products, premium Aswan dates, pure hibiscus, natural dried goods, and homemade food for your gatherings." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(15, 23, 42, 0.08)',
+            glow: '0 20px 60px rgba(249, 115, 22, 0.18)'
+          },
+          keyframes: {
+            floaty: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            fadeUp: {
+              '0%': { opacity: 0, transform: 'translateY(24px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+            pulseSoft: {
+              '0%, 100%': { transform: 'scale(1)', opacity: 0.9 },
+              '50%': { transform: 'scale(1.06)', opacity: 1 }
+            }
+          },
+          animation: {
+            floaty: 'floaty 5s ease-in-out infinite',
+            fadeUp: 'fadeUp 0.9s ease-out forwards',
+            pulseSoft: 'pulseSoft 2.8s ease-in-out infinite'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="font-cairo text-slate-800 overflow-x-hidden">
+
+  <div class="fixed inset-0 -z-10 pointer-events-none">
+    <div class="absolute top-10 right-10 w-80 h-80 bg-orange-300/20 blur-3xl rounded-full animate-pulseSoft"></div>
+    <div class="absolute top-1/3 left-0 w-72 h-72 bg-emerald-300/10 blur-3xl rounded-full animate-floaty"></div>
+  </div>
+
+  <header class="sticky top-0 z-50 border-b border-orange-100/70 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4">
+        <a href="#home" class="flex items-center gap-3 group">
+          <img src="imgs/logo.jpg" alt="Aswania" class="w-12 h-12 rounded-2xl shadow-glow object-cover group-hover:scale-105 transition">
+          <div>
+            <h1 class="text-xl font-extrabold text-slate-900 leading-none">Aswania</h1>
+            <p class="text-sm text-slate-500">From Aswan to your home</p>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+          <a href="#products" class="hover:text-orange-600 transition">Products</a>
+          <a href="#story" class="hover:text-orange-600 transition">About</a>
+          <a href="#how" class="hover:text-orange-600 transition">How to order</a>
+          <a href="#contact" class="hover:text-orange-600 transition">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-soft hover:border-orange-300 hover:text-orange-700 transition">
+            العربية
+            <span>🌐</span>
+          </a>
+
+          <a href="#products" class="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-5 py-3 text-sm font-bold shadow-soft hover:-translate-y-0.5 hover:bg-slate-800 transition">
+            Order now
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div class="reveal">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 font-bold text-sm mb-6 border border-orange-200/60">
+          <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+          Authentic Ramadan products made by women from Aswan
+        </span>
+
+        <h2 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.05] tracking-tight">
+          From the heart of
+          <span class="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-400 bg-clip-text text-transparent">Aswan</span>
+          to your home
+        </h2>
+
+        <p class="mt-6 text-lg md:text-xl text-slate-600 leading-10 max-w-2xl">
+          Premium Aswan dates, pure hibiscus, natural dried goods, and homemade food for Ramadan gatherings — all made with care and love.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#products" class="inline-flex justify-center items-center gap-2 rounded-2xl bg-orange-600 text-white px-6 py-4 font-bold shadow-glow hover:bg-orange-700 hover:-translate-y-1 transition">
+            Explore products
+            <span>🛍️</span>
+          </a>
+          <button onclick="openWhatsApp('Hello, I would like to know more about your available products and prices.')" class="inline-flex justify-center items-center gap-2 rounded-2xl bg-white border border-orange-200 text-slate-800 px-6 py-4 font-bold shadow-soft hover:border-orange-300 hover:-translate-y-1 transition">
+            Order on WhatsApp
+            <span>💬</span>
+          </button>
+        </div>
+
+        <div class="mt-10 grid grid-cols-3 gap-4 max-w-xl">
+          <div class="rounded-2xl bg-white p-4 shadow-soft border border-orange-100 card-border">
+            <div class="text-2xl font-extrabold text-orange-600">100%</div>
+            <div class="text-sm text-slate-600 mt-1">Natural products</div>
+          </div>
+          <div class="rounded-2xl bg-white p-4 shadow-soft border border-orange-100 card-border">
+            <div class="text-2xl font-extrabold text-orange-600">Ramadan</div>
+            <div class="text-sm text-slate-600 mt-1">Gatherings & orders</div>
+          </div>
+          <div class="rounded-2xl bg-white p-4 shadow-soft border border-orange-100 card-border">
+            <div class="text-2xl font-extrabold text-orange-600">WhatsApp</div>
+            <div class="text-sm text-slate-600 mt-1">Fast ordering</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative reveal">
+        <div class="absolute -top-8 -right-6 w-28 h-28 bg-amber-300/40 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-10 -left-8 w-36 h-36 bg-orange-300/30 rounded-full blur-3xl"></div>
+
+        <div class="relative bg-white rounded-[2rem] p-6 shadow-soft border border-orange-100 overflow-hidden card-border">
+          <div class="rounded-[1.5rem] bg-gradient-to-br from-orange-50 via-amber-50 to-white p-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm text-slate-500">Authentic Egyptian identity</p>
+                <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Aswania 🧡</h3>
+              </div>
+              <div class="w-14 h-14 rounded-2xl bg-white shadow-soft flex items-center justify-center text-2xl animate-floaty">
+                🌺
+              </div>
+            </div>
+
+            <div class="mt-6 grid sm:grid-cols-2 gap-4">
+              <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
+                <div class="w-11 h-11 rounded-2xl bg-orange-100 flex items-center justify-center mb-3">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-orange-600">
+                    <path d="M8 2v3M16 2v3M3 9h18M5 5h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900">Premium Aswan dates</h4>
+                <p class="text-sm text-slate-600 mt-1">Authentic taste and high quality.</p>
+              </div>
+
+              <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
+                <div class="w-11 h-11 rounded-2xl bg-amber-100 flex items-center justify-center mb-3">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-amber-600">
+                    <path d="M20 4c-7 0-13 3-13 10 0 4 3 6 6 6 7 0 10-6 10-13 0-1.1-.9-2-2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M8 16c2-1 5-4 7-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900">Pure hibiscus</h4>
+                <p class="text-sm text-slate-600 mt-1">Refreshing and perfect for Ramadan.</p>
+              </div>
+
+              <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
+                <div class="w-11 h-11 rounded-2xl bg-green-100 flex items-center justify-center mb-3">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-green-600">
+                    <path d="M12 2l1.2 4.8L18 8l-4.8 1.2L12 14l-1.2-4.8L6 8l4.8-1.2L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M19 13l.7 2.3L22 16l-2.3.7L19 19l-.7-2.3L16 16l2.3-.7L19 13Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900">Natural dried goods</h4>
+                <p class="text-sm text-slate-600 mt-1">Carefully selected products.</p>
+              </div>
+
+              <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
+                <div class="w-11 h-11 rounded-2xl bg-red-100 flex items-center justify-center mb-3">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-red-600">
+                    <path d="M7 10h10l-1 10H8L7 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M6 10h12M8 6h8M10 6V4m4 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900">Homemade food</h4>
+                <p class="text-sm text-slate-600 mt-1">For gatherings and warm family moments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 reveal">
+      <div>
+        <p class="text-orange-600 font-bold">Products</p>
+        <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">Ready-to-order Ramadan picks</h3>
+      </div>
+      <p class="md:text-left text-slate-600 max-w-xl leading-8">
+        Choose the product you want and click “Order on WhatsApp” to send a ready-made message.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <article class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center mb-4">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="text-orange-600">
+            <path d="M6 19c0-4 3-8 6-8s6 4 6 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 11c1-4 3-7 4-7s3 3 4 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h4 class="text-xl font-extrabold text-slate-900">Premium Aswan dates</h4>
+        <p class="text-slate-600 mt-3 leading-7">Carefully selected dates with authentic taste and excellent quality, ideal for hosting or gifting.</p>
+        <button onclick="openWhatsApp('I would like to order: Premium Aswan dates.')" class="mt-5 w-full rounded-2xl bg-slate-900 text-white py-3 font-bold hover:bg-slate-800 hover:-translate-y-0.5 transition">
+          Order on WhatsApp
+        </button>
+      </article>
+
+      <article class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center mb-4">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="text-amber-600">
+            <path d="M12 3c4 4 6 7 6 10a6 6 0 1 1-12 0c0-3 2-6 6-10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M9 14c1 .8 2.1 1.2 3 .8 1-.4 1.7-1.5 2.1-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h4 class="text-xl font-extrabold text-slate-900">Pure hibiscus</h4>
+        <p class="text-slate-600 mt-3 leading-7">Natural and refreshing hibiscus with a distinctive taste, great for iftar and Ramadan hospitality.</p>
+        <button onclick="openWhatsApp('I would like to order: Pure hibiscus.')" class="mt-5 w-full rounded-2xl bg-slate-900 text-white py-3 font-bold hover:bg-slate-800 hover:-translate-y-0.5 transition">
+          Order on WhatsApp
+        </button>
+      </article>
+
+      <article class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center mb-4">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="text-green-600">
+            <path d="M5 20c4-1 7-4 9-9 2 2 4 2 5 1 1-1 1-3 0-5-2 0-4 1-6 4 0-3-1-5-3-7-4 2-5 6-4 9-2 2-3 4-1 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h4 class="text-xl font-extrabold text-slate-900">Natural dried goods</h4>
+        <p class="text-slate-600 mt-3 leading-7">Carefully chosen dried goods, suitable for daily use and Ramadan needs.</p>
+        <button onclick="openWhatsApp('I would like to order: Natural dried goods.')" class="mt-5 w-full rounded-2xl bg-slate-900 text-white py-3 font-bold hover:bg-slate-800 hover:-translate-y-0.5 transition">
+          Order on WhatsApp
+        </button>
+      </article>
+
+      <article class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-red-100 flex items-center justify-center mb-4">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="text-red-600">
+            <path d="M8 10h8l-1 9H9l-1-9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M7 10h10M9 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9 15h6M9 18h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h4 class="text-xl font-extrabold text-slate-900">Homemade food</h4>
+        <p class="text-slate-600 mt-3 leading-7">Ready homemade meals for Ramadan gatherings and family time with an authentic home-style taste.</p>
+        <button onclick="openWhatsApp('I would like to order: Homemade food for Ramadan gatherings.')" class="mt-5 w-full rounded-2xl bg-slate-900 text-white py-3 font-bold hover:bg-slate-800 hover:-translate-y-0.5 transition">
+          Order on WhatsApp
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <section id="story" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+      <div class="reveal bg-white rounded-[2rem] p-8 shadow-soft border border-orange-100 card-border">
+        <p class="text-orange-600 font-bold">About Aswania</p>
+        <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">
+          Authentic products from the heart of Aswan
+        </h3>
+
+        <div class="mt-6 rounded-2xl bg-orange-50 p-5 border border-orange-100 text-slate-700 leading-8 text-lg">
+          Aswania… a story born in the heart of Aswan 🌴<br><br>
+          Women decided to turn their homes into a source of income and create natural products by hand, full of love and passion 💛<br>
+          At Aswania, we do not offer products only…<br>
+          We offer a story of struggle, true authenticity, and quality you can feel in every detail<br><br>
+          Every product carries the hands of a strong woman…<br>
+          and a dream that grows every day 👑✨<br><br>
+          Choosing Aswania is not just a purchase…<br>
+          it is part of a success story and support for a woman building her future with her own hands 🧕👑
+        </div>
+
+        <p class="mt-6 text-slate-600 leading-8 text-lg">
+          Aswania is a brand offering Ramadan products and carefully selected foods, made with love and care by women from Aswan. Our goal is to bring quality and authentic taste to your doorstep in a simple and fast way.
+        </p>
+
+        <div class="mt-6 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-orange-50 p-4 border border-orange-100">
+            <h4 class="font-bold text-slate-900">High quality</h4>
+            <p class="text-slate-600 mt-2 text-sm leading-6">Careful selection of ingredients and materials.</p>
+          </div>
+          <div class="rounded-2xl bg-orange-50 p-4 border border-orange-100">
+            <h4 class="font-bold text-slate-900">Ramadan spirit</h4>
+            <p class="text-slate-600 mt-2 text-sm leading-6">Everything fits the season and hospitality.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal rounded-[2rem] p-8 bg-gradient-to-br from-orange-500 via-amber-400 to-orange-400 text-white shadow-glow relative overflow-hidden">
+        <div class="absolute -top-10 -left-10 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+        <h3 class="text-3xl font-extrabold relative">Why people will love Aswania</h3>
+
+        <div class="mt-8 space-y-5 relative">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✅</span>
+            <p class="text-lg leading-8">Natural and authentic products with a unique Aswan touch.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✅</span>
+            <p class="text-lg leading-8">Fast and direct ordering through WhatsApp.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✅</span>
+            <p class="text-lg leading-8">A clean, elegant interface that makes ordering easy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="text-center mb-10 reveal">
+      <p class="text-orange-600 font-bold">How to order</p>
+      <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">3 simple steps</h3>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition">
+        <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center text-2xl font-black text-orange-600">1</div>
+        <h4 class="text-xl font-bold mt-5 text-slate-900">Choose a product</h4>
+        <p class="mt-3 text-slate-600 leading-7">Pick the product that fits you or your gathering.</p>
+      </div>
+
+      <div class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition">
+        <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center text-2xl font-black text-orange-600">2</div>
+        <h4 class="text-xl font-bold mt-5 text-slate-900">Send a WhatsApp message</h4>
+        <p class="mt-3 text-slate-600 leading-7">Click the order button and a ready message will open.</p>
+      </div>
+
+      <div class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition">
+        <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center text-2xl font-black text-orange-600">3</div>
+        <h4 class="text-xl font-bold mt-5 text-slate-900">Confirm details</h4>
+        <p class="mt-3 text-slate-600 leading-7">Quantity, address, and delivery or pickup details.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    <div class="rounded-[2rem] bg-slate-950 text-white p-8 md:p-12 shadow-glow overflow-hidden relative card-border">
+      <div class="absolute -left-16 -top-16 w-48 h-48 bg-orange-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute -right-16 -bottom-16 w-48 h-48 bg-amber-400/20 rounded-full blur-3xl"></div>
+
+      <div class="relative grid lg:grid-cols-2 gap-8 items-center">
+        <div class="reveal">
+          <h3 class="text-3xl md:text-4xl font-extrabold">Ready to order from Aswania?</h3>
+          <p class="mt-4 text-slate-300 text-lg leading-8">
+            Send a message now and get the details, prices, and the right quantity quickly and easily.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 lg:justify-end reveal">
+          <button onclick="openWhatsApp('Hello, I would like to order from Aswania and need the details and prices.')" class="rounded-2xl bg-orange-500 px-6 py-4 font-bold text-white hover:bg-orange-600 hover:-translate-y-1 transition shadow-glow">
+            Order now on WhatsApp
+          </button>
+          <a href="#home" class="rounded-2xl bg-white/10 px-6 py-4 font-bold text-white hover:bg-white/15 hover:-translate-y-1 transition text-center">
+            Back to top
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-orange-100 bg-white/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p class="text-slate-600">© <span id="year"></span> Aswania — From Aswan to your home</p>
+    </div>
+  </footer>
+
+  <button onclick="openWhatsApp('Hello, I would like to ask about Aswania products.')" 
+          class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-green-500 text-white shadow-lg flex items-center justify-center hover:scale-110 transition animate-pulseSoft"
+          aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+      <path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l.9-4.1A8 8 0 1 1 20 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M9.2 8.7c.2-.5.4-.5.7-.5h.5c.2 0 .5 0 .6.4l.8 1.9c.1.3 0 .6-.2.8l-.5.6c-.1.2-.2.4 0 .7.3.6 1.1 1.8 2.4 2.4.4.2.6.1.8-.1l.8-1c.2-.2.4-.2.7-.1l1.8.9c.3.2.4.4.3.7-.2.7-.8 1.4-1.6 1.5-1.1.1-2.4-.3-4.2-1.5-1.7-1.2-2.8-2.7-3.5-4.2-.5-1.2-.5-2.1-.1-3Z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <script>
+    const phoneNumber = "201090133710";
+
+    function openWhatsApp(message) {
+      const encodedMessage = encodeURIComponent(message);
+      const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
