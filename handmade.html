@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أسوانية | القسم</title>
+  <meta name="description" content="أسوانية - صفحة القسم" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { cairo: ['Cairo', 'sans-serif'] },
+          boxShadow: {
+            soft: '0 10px 30px rgba(15, 23, 42, 0.08)',
+            glow: '0 20px 60px rgba(249, 115, 22, 0.18)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .card-border { box-shadow: 0 1px 0 rgba(255,255,255,.7) inset, 0 1px 18px rgba(15,23,42,.05); }
+  </style>
+</head>
+
+<body class="font-cairo text-slate-800 bg-gradient-to-b from-orange-50 via-white to-white">
+  <header class="sticky top-0 z-50 border-b border-orange-100/70 bg-white/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4 gap-4">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="imgs/logo.jpg" alt="أسوانية" class="w-12 h-12 rounded-2xl shadow-glow object-cover">
+          <div>
+            <h1 class="text-xl font-extrabold text-slate-900 leading-none">أسوانية</h1>
+            <p class="text-sm text-slate-500">من قلب أسوان لحد بيتك</p>
+          </div>
+        </a>
+
+        <a href="index.html#sections" class="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-5 py-3 text-sm font-bold shadow-soft hover:bg-slate-800 transition">
+          رجوع للأقسام <span>←</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="pageRoot"></main>
+
+  <footer class="border-t border-orange-100 bg-white/60 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p class="text-slate-600">© <span id="year"></span> أسوانية🧡</p>
+      <a href="index.html" class="text-orange-600 font-bold hover:text-orange-700 transition">العودة للرئيسية</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const pageData = {
+      title: "Handmade",
+      badge: "Handmade",
+      heroTitle: "مشغولات يدوية وتراثية",
+      heroText: "مشغولات “أسوانية” اليدوية ليست مجرد منتجات… بل حكاية تراث تُنسج بخيوط من الطبيعة وروح النوبة 🤎",
+      products: [
+        {
+          name: "مشغولات يدوية أسوانية",
+          desc: "مشغولات يدوية مصممة بحب و إتقان",
+          img: "imgs/hmp1.jpg",
+          order: "أريد طلب: تمر أسواني فاخر"
+        },
+        {
+          name: "مشغولات يدوية أسوانية",
+          desc: "مشغولات يدوية مصممة بحب و إتقان",
+          img: "imgs/hmp2.jpg",
+          order: "أريد طلب: كركديه صافي"
+        },
+        {
+          name: "مشغولات يدوية أسوانية",
+          desc: "مشغولات يدوية مصممة بحب و إتقان",
+          img: "imgs/hmp3.jpg",
+          order: "أريد طلب: عرديب"
+        },
+        {
+          name: "مشغولات يدوية أسوانية",
+          desc: "مشغولات يدوية مصممة بحب و إتقان",
+          img: "imgs/hmp4.jpg",
+          order: "أريد طلب: ملوخية مجففة"
+        },
+        {
+          name: "مشغولات يدوية أسوانية",
+          desc: "مشغولات يدوية مصممة بحب و إتقان",
+          img: "imgs/hmp5.jpg",
+          order: "أريد طلب: بامية مجففة"
+        },
+        {
+          name: "مشغولات يدوية أسوانية",
+          desc: "مشغولات يدوية مصممة بحب و إتقان",
+          img: "imgs/hmp6.jpg",
+          order: "أريد طلب: شطة سوداني"
+        },
+        {
+          name: "مشغولات يدوية أسوانية",
+          desc: "مشغولات يدوية مصممة بحب و إتقان",
+          img: "imgs/hmp7.jpg",
+          order: "أريد طلب: شطة سوداني"
+        },
+        {
+          name: "مشغولات يدوية أسوانية",
+          desc: "مشغولات يدوية مصممة بحب و إتقان",
+          img: "imgs/hmp8.jpg",
+          order: "أريد طلب: شطة سوداني"
+        },
+        {
+          name: "مشغولات يدوية أسوانية",
+          desc: "مشغولات يدوية مصممة بحب و إتقان",
+          img: "imgs/hmp9.jpg",
+          order: "أريد طلب: شطة سوداني"
+        }
+      ]
+    };
+
+    const root = document.getElementById("pageRoot");
+
+    root.innerHTML = `
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 font-bold text-sm mb-6 border border-orange-200/60">
+              ${pageData.badge}
+            </span>
+            <h2 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight">${pageData.heroTitle}</h2>
+            <p class="mt-5 text-lg md:text-xl text-slate-600 leading-9 max-w-2xl">${pageData.heroText}</p>
+            <div class="mt-8">
+              <a href="index.html#contact" class="inline-flex items-center gap-2 rounded-2xl bg-orange-600 text-white px-6 py-4 font-bold shadow-glow hover:bg-orange-700 hover:-translate-y-1 transition">
+                اطلب عبر واتساب <span>💬</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-[2rem] p-6 shadow-soft border border-orange-100 card-border">
+            <img src="imgs/handmade.jpg" class="w-full h-[320px] object-cover rounded-[1.5rem]" alt="${pageData.title}">
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          ${pageData.products.map(p => `
+            <article class="bg-white rounded-[1.75rem] p-5 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition duration-300">
+              <img src="${p.img}" alt="${p.name}" class="w-full h-56 object-cover rounded-2xl mb-4">
+              <h3 class="text-xl font-extrabold text-slate-900">${p.name}</h3>
+              <p class="text-slate-600 mt-3 leading-7">${p.desc}</p>
+              <button onclick="openWhatsApp('${p.order}')" class="mt-5 w-full rounded-2xl bg-slate-900 text-white py-3 font-bold hover:bg-slate-800 hover:-translate-y-0.5 transition">
+                اطلب عبر واتساب
+              </button>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+    `;
+
+    const phoneNumber = "201090133710";
+    function openWhatsApp(message) {
+      const encodedMessage = encodeURIComponent(message);
+      const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  </script>
+</body>
+</html>
