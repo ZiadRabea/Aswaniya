@@ -4,36 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>أسوانية | من قلب أسوان لحد بيتك</title>
-  <meta name="description" content="أسوانية🧡 منتجات طبيعية وتراثية، أكل بيتي، منتجات تجميل طبيعية، ومنتجات يدوية من أسوان." />
+
+  <meta
+    name="description"
+    content="أسوانية🧡 منتجات طبيعية وتراثية، أكل بيتي، منتجات تجميل طبيعية، ومنتجات يدوية من أسوان."
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { cairo: ['Cairo', 'sans-serif'] },
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif']
+          },
+
           boxShadow: {
             soft: '0 10px 30px rgba(15, 23, 42, 0.08)',
             glow: '0 20px 60px rgba(249, 115, 22, 0.18)'
           },
+
           keyframes: {
             floaty: {
               '0%, 100%': { transform: 'translateY(0px)' },
               '50%': { transform: 'translateY(-10px)' }
             },
+
             fadeUp: {
-              '0%': { opacity: 0, transform: 'translateY(24px)' },
-              '100%': { opacity: 1, transform: 'translateY(0)' }
+              '0%': {
+                opacity: 0,
+                transform: 'translateY(24px)'
+              },
+              '100%': {
+                opacity: 1,
+                transform: 'translateY(0)'
+              }
             },
+
             pulseSoft: {
-              '0%, 100%': { transform: 'scale(1)', opacity: 0.9 },
-              '50%': { transform: 'scale(1.06)', opacity: 1 }
+              '0%, 100%': {
+                transform: 'scale(1)',
+                opacity: 0.9
+              },
+              '50%': {
+                transform: 'scale(1.06)',
+                opacity: 1
+              }
             }
           },
+
           animation: {
             floaty: 'floaty 5s ease-in-out infinite',
             fadeUp: 'fadeUp 0.9s ease-out forwards',
@@ -41,34 +69,36 @@
           }
         }
       }
-      // module.exports = {
-      //   content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
-      //   theme: {
-      //     extend: {},
-      //   },
-      //   plugins: [],
-      // }
     }
   </script>
 
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
+
     .glass {
       background: rgba(255,255,255,.75);
       backdrop-filter: blur(16px);
     }
+
     .card-border {
-      box-shadow: 0 1px 0 rgba(255,255,255,.7) inset, 0 1px 18px rgba(15,23,42,.05);
+      box-shadow:
+        0 1px 0 rgba(255,255,255,.7) inset,
+        0 1px 18px rgba(15,23,42,.05);
     }
+
     .reveal {
       opacity: 0;
       transform: translateY(20px);
       transition: all .7s ease;
     }
+
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
+
     .icon-btn {
       width: 44px;
       height: 44px;
@@ -81,72 +111,111 @@
       box-shadow: 0 10px 25px rgba(15,23,42,.05);
       transition: .25s ease;
     }
+
     .icon-btn:hover {
       transform: translateY(-2px);
       border-color: rgba(249,115,22,.4);
     }
+
     .slider-track {
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
     }
+
     .slider-track > article {
       scroll-snap-align: start;
     }
+
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
 
-    /* Hide scrollbar for IE, Edge, and Firefox */
     .no-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;     /* Firefox */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .announcement-thumb img {
+      transition: transform .5s ease;
+    }
+
+    .announcement-thumb:hover img {
+      transform: scale(1.06);
     }
   </style>
-
-  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="font-cairo text-slate-800 overflow-x-hidden bg-gradient-to-b from-orange-50 via-white to-white">
 
+  <!-- Background Effects -->
   <div class="fixed inset-0 -z-10 pointer-events-none">
     <div class="absolute top-10 right-10 w-80 h-80 bg-orange-300/20 blur-3xl rounded-full animate-pulseSoft"></div>
     <div class="absolute top-1/3 left-0 w-72 h-72 bg-emerald-300/10 blur-3xl rounded-full animate-floaty"></div>
   </div>
 
+  <!-- Header -->
   <header class="sticky top-0 z-50 border-b border-orange-100/70 glass">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
       <div class="flex items-center justify-between py-4 gap-4">
+
         <a href="#home" class="flex items-center gap-3 group">
-          <img src="imgs/logo.jpg" alt="أسوانية" class="w-12 h-12 rounded-2xl shadow-glow object-cover group-hover:scale-105 transition">
+          <img
+            src="imgs/logo.jpg"
+            alt="أسوانية"
+            class="w-12 h-12 rounded-2xl shadow-glow object-cover group-hover:scale-105 transition"
+          >
+
           <div>
-            <h1 class="text-xl font-extrabold text-slate-900 leading-none">أسوانية</h1>
-            <p class="text-sm text-slate-500">من قلب أسوان لحد بيتك</p>
+            <h1 class="text-xl font-extrabold text-slate-900 leading-none">
+              أسوانية
+            </h1>
+
+            <p class="text-sm text-slate-500">
+              من قلب أسوان لحد بيتك
+            </p>
           </div>
         </a>
 
         <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
           <a href="#sections" class="hover:text-orange-600 transition">الأقسام</a>
           <a href="#events" class="hover:text-orange-600 transition">الأحداث</a>
+          <a href="#announcements" class="hover:text-orange-600 transition">الإعلانات</a>
+          <a href="stories.html" class="hover:text-orange-600 transition">القصص</a>
           <a href="#story" class="hover:text-orange-600 transition">عنّا</a>
           <a href="#contact" class="hover:text-orange-600 transition">تواصل</a>
         </nav>
 
         <div class="flex items-center gap-3">
-          <a href="en.html" class="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-soft hover:border-orange-300 hover:text-orange-700 transition">
-            EN <span>🌐</span>
+
+          <a
+            href="en.html"
+            class="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-soft hover:border-orange-300 hover:text-orange-700 transition"
+          >
+            EN 🌐
           </a>
 
-          <a href="#sections" class="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-5 py-3 text-sm font-bold shadow-soft hover:-translate-y-0.5 hover:bg-slate-800 transition">
-            استكشف الأقسام <span>→</span>
+          <a
+            href="#sections"
+            class="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-5 py-3 text-sm font-bold shadow-soft hover:-translate-y-0.5 hover:bg-slate-800 transition"
+          >
+            استكشف الأقسام →
           </a>
+
         </div>
+
       </div>
+
     </div>
   </header>
 
+  <!-- Hero -->
   <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-16">
+
     <div class="grid lg:grid-cols-2 gap-14 items-center">
+
       <div class="reveal">
+
         <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 font-bold text-sm mb-6 border border-orange-200/60">
           <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
           منتجات أصيلة من صنع سيدات أسوان
@@ -154,218 +223,330 @@
 
         <h2 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.05] tracking-tight">
           من قلب
-          <span class="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-400 bg-clip-text text-transparent">أسوان</span>
+          <span class="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-400 bg-clip-text text-transparent">
+            أسوان
+          </span>
           لحد بيتك
         </h2>
 
         <p class="mt-6 text-lg md:text-xl text-slate-600 leading-10 max-w-2xl">
-          منتجات طبيعية وتراثية، أكل بيتي، منتجات تجميل طبيعية، ومشغولات يدوية، كلها معمولة بحب وإتقان.
+          منتجات طبيعية وتراثية، أكل بيتي، منتجات تجميل طبيعية،
+          ومشغولات يدوية، كلها معمولة بحب وإتقان.
         </p>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="#sections" class="inline-flex justify-center items-center gap-2 rounded-2xl bg-orange-600 text-white px-6 py-4 font-bold shadow-glow hover:bg-orange-700 hover:-translate-y-1 transition">
-            استعرض الأقسام <span>🛍️</span>
+
+          <a
+            href="#sections"
+            class="inline-flex justify-center items-center gap-2 rounded-2xl bg-orange-600 text-white px-6 py-4 font-bold shadow-glow hover:bg-orange-700 hover:-translate-y-1 transition"
+          >
+            استعرض الأقسام 🛍️
           </a>
-          <button onclick="openWhatsApp('مرحبًا، أريد معرفة تفاصيل المنتجات المتاحة وأسعارها.')" class="inline-flex justify-center items-center gap-2 rounded-2xl bg-white border border-orange-200 text-slate-800 px-6 py-4 font-bold shadow-soft hover:border-orange-300 hover:-translate-y-1 transition">
-            اطلب عبر واتساب <span>💬</span>
+
+          <button
+            onclick="openWhatsApp('مرحبًا، أريد معرفة تفاصيل المنتجات المتاحة وأسعارها.')"
+            class="inline-flex justify-center items-center gap-2 rounded-2xl bg-white border border-orange-200 text-slate-800 px-6 py-4 font-bold shadow-soft hover:border-orange-300 hover:-translate-y-1 transition"
+          >
+            اطلب عبر واتساب 💬
           </button>
+
         </div>
 
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a class="icon-btn" href="https://instagram.com/yourpage" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
-              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
-            </svg>
-          </a>
-          <a class="icon-btn" href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M14 8.5V7.2c0-.9.6-1.2 1.1-1.2H17V3h-2.2C12.4 3 11 4.6 11 7.1v1.4H9v3h2V21h3v-9.5h2.6l.4-3H14Z" fill="currentColor"/>
-            </svg>
-          </a>
-          <a class="icon-btn" href="https://tiktok.com/@yourpage" target="_blank" rel="noopener" aria-label="TikTok">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M14 3c.6 2.9 2.4 4.7 5 5v3.1c-1.8 0-3.5-.6-5-1.7V16a5 5 0 1 1-5-5c.4 0 .7 0 1 .1v3.3a2 2 0 1 0 2 2V3h2Z" fill="currentColor"/>
-            </svg>
-          </a>
-          <a class="icon-btn" href="https://wa.me/201090133710" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l.9-4.1A8 8 0 1 1 20 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M9.2 8.7c.2-.5.4-.5.7-.5h.5c.2 0 .5 0 .6.4l.8 1.9c.1.3 0 .6-.2.8l-.5.6c-.1.2-.2.4 0 .7.3.6 1.1 1.8 2.4 2.4.4.2.6.1.8-.1l.8-1c.2-.2.4-.2.7-.1l1.8.9c.3.2.4.4.3.7-.2.7-.8 1.4-1.6 1.5-1.1.1-2.4-.3-4.2-1.5-1.7-1.2-2.8-2.7-3.5-4.2-.5-1.2-.5-2.1-.1-3Z" fill="currentColor"/>
-            </svg>
-          </a>
-        </div>
       </div>
 
       <div class="relative reveal">
+
         <div class="absolute -top-8 -right-6 w-28 h-28 bg-amber-300/40 rounded-full blur-2xl"></div>
         <div class="absolute -bottom-10 -left-8 w-36 h-36 bg-orange-300/30 rounded-full blur-3xl"></div>
 
         <div class="relative bg-white rounded-[2rem] p-6 shadow-soft border border-orange-100 overflow-hidden card-border">
+
           <div class="rounded-[1.5rem] bg-gradient-to-br from-orange-50 via-amber-50 to-white p-6">
+
             <div class="flex items-center justify-between">
+
               <div>
                 <p class="text-sm text-slate-500">الهوية المصرية الأصيلة</p>
-                <h3 class="text-2xl font-extrabold text-slate-900 mt-1">أسوانية🧡</h3>
+
+                <h3 class="text-2xl font-extrabold text-slate-900 mt-1">
+                  أسوانية🧡
+                </h3>
               </div>
+
               <div class="w-14 h-14 rounded-2xl bg-white shadow-soft flex items-center justify-center text-2xl animate-floaty">
                 🌺
               </div>
+
             </div>
 
             <div class="mt-6 grid sm:grid-cols-2 gap-4">
-              <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
+
+              <div class="rounded-2xl bg-white p-4 border border-orange-100 shadow-sm">
                 <div class="w-11 h-11 rounded-2xl bg-orange-100 flex items-center justify-center mb-3">🌴</div>
                 <h4 class="font-bold text-slate-900">منتجات غذائية</h4>
-                <p class="text-sm text-slate-600 mt-1">تمر، كركديه، مجففات، وأكل بيتي.</p>
+                <p class="text-sm text-slate-600 mt-1">
+                  تمر، كركديه، مجففات، وأكل بيتي.
+                </p>
               </div>
 
-              <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
+              <div class="rounded-2xl bg-white p-4 border border-orange-100 shadow-sm">
                 <div class="w-11 h-11 rounded-2xl bg-amber-100 flex items-center justify-center mb-3">✨</div>
                 <h4 class="font-bold text-slate-900">منتجات تجميل</h4>
-                <p class="text-sm text-slate-600 mt-1">منتجات طبيعية للعناية والجمال.</p>
+                <p class="text-sm text-slate-600 mt-1">
+                  منتجات طبيعية للعناية والجمال.
+                </p>
               </div>
 
-              <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
+              <div class="rounded-2xl bg-white p-4 border border-orange-100 shadow-sm">
                 <div class="w-11 h-11 rounded-2xl bg-green-100 flex items-center justify-center mb-3">🧵</div>
                 <h4 class="font-bold text-slate-900">مشغولات يدوية</h4>
-                <p class="text-sm text-slate-600 mt-1">لمسة تراثية وصناعة محلية جميلة.</p>
+                <p class="text-sm text-slate-600 mt-1">
+                  لمسة تراثية وصناعة محلية جميلة.
+                </p>
               </div>
 
-              <div class="rounded-2xl bg-white p-4 border border-orange-100 hover:-translate-y-1 transition shadow-sm">
+              <div class="rounded-2xl bg-white p-4 border border-orange-100 shadow-sm">
                 <div class="w-11 h-11 rounded-2xl bg-red-100 flex items-center justify-center mb-3">💛</div>
                 <h4 class="font-bold text-slate-900">بروح اجتماعية</h4>
-                <p class="text-sm text-slate-600 mt-1">تمكين سيدات أسوان ودعم مشاريعهن.</p>
+                <p class="text-sm text-slate-600 mt-1">
+                  تمكين سيدات أسوان ودعم مشاريعهن.
+                </p>
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+  <!-- Sections -->
   <section id="sections" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 reveal">
+
       <div>
         <p class="text-orange-600 font-bold">الأقسام</p>
-        <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">تصفح منتجاتنا ✨</h3>
+
+        <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">
+          تصفح منتجاتنا ✨
+        </h3>
       </div>
+
       <p class="md:text-left text-slate-600 max-w-xl leading-8">
-        منتجات صنعت بأيادي سيدات أسوان 
+        منتجات صنعت بأيادي سيدات أسوان
       </p>
+
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <a href="food.html" class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition duration-300 block">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <a href="food.html" class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition block">
         <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center mb-4 text-2xl">🥗</div>
-        <h4 class="text-2xl font-extrabold text-slate-900">Food (Nutrition)</h4>
-        <p class="text-slate-600 mt-3 leading-7">أطعمة ومنتجات غذائية طبيعية، تراثية، ومناسبة للطلب اليومي والضيافة.</p>
-        <span class="mt-5 inline-flex text-orange-600 font-bold">افتح الصفحة ←</span>
+        <h4 class="text-2xl font-extrabold text-slate-900">Food</h4>
+        <p class="text-slate-600 mt-3 leading-7">
+          أطعمة ومنتجات غذائية طبيعية وتراثية.
+        </p>
       </a>
 
-      <a href="cosmetics.html" class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition duration-300 block">
+      <a href="cosmetics.html" class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition block">
         <div class="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center mb-4 text-2xl">💄</div>
         <h4 class="text-2xl font-extrabold text-slate-900">Cosmetics</h4>
-        <p class="text-slate-600 mt-3 leading-7">منتجات تجميل وعناية طبيعية، بسيطة وأنيقة، مع هوية قريبة من روح البراند.</p>
-        <span class="mt-5 inline-flex text-orange-600 font-bold">افتح الصفحة ←</span>
+        <p class="text-slate-600 mt-3 leading-7">
+          منتجات تجميل وعناية طبيعية.
+        </p>
       </a>
 
-      <a href="handmade.html" class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition duration-300 block">
+      <a href="handmade.html" class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition block">
         <div class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center mb-4 text-2xl">🧶</div>
         <h4 class="text-2xl font-extrabold text-slate-900">Handmade</h4>
-        <p class="text-slate-600 mt-3 leading-7">منتجات يدوية وتراثية، مناسبة للهدايا والديكور والاستخدام اليومي.</p>
-        <span class="mt-5 inline-flex text-orange-600 font-bold">افتح الصفحة ←</span>
+        <p class="text-slate-600 mt-3 leading-7">
+          منتجات يدوية وتراثية جميلة.
+        </p>
       </a>
+
+      <a href="stories.html" class="reveal bg-white rounded-[1.75rem] p-6 shadow-soft border border-orange-100 card-border hover:-translate-y-2 transition block">
+        <div class="w-14 h-14 rounded-2xl bg-pink-100 flex items-center justify-center mb-4 text-2xl">📖</div>
+        <h4 class="text-2xl font-extrabold text-slate-900">Stories</h4>
+        <p class="text-slate-600 mt-3 leading-7">
+          قصص، لحظات، وتفاصيل يومية من أسوانية.
+        </p>
+      </a>
+
     </div>
+
   </section>
 
-  <section id="events" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <!-- Announcements -->
+  <section id="announcements" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 reveal">
+
       <div>
-        <p class="text-orange-600 font-bold">الفعاليات والبازارات</p>
+        <p class="text-orange-600 font-bold">الإعلانات</p>
+
+        <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">
+          أحدث الأخبار واللقطات
+        </h3>
       </div>
 
-      <div class="flex items-center gap-3">
-        <button id="prevEvent" class="rounded-full border border-orange-200 bg-white px-4 py-3 font-bold shadow-soft hover:border-orange-300 hover:-translate-y-0.5 transition">←</button>
-        <button id="nextEvent" class="rounded-full border border-orange-200 bg-white px-4 py-3 font-bold shadow-soft hover:border-orange-300 hover:-translate-y-0.5 transition">→</button>
+      <p class="md:text-left text-slate-600 max-w-xl leading-8">
+        أحدث الصور والإعلانات والفعاليات.
+      </p>
+
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-6">
+
+      <!-- Main -->
+      <article class="lg:col-span-5 reveal relative overflow-hidden rounded-[2rem] shadow-soft border border-orange-100 card-border group bg-white">
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+
+        <img
+          src="imgs/announcements/announce-main.jpg"
+          alt="Main Announcement"
+          class="h-full min-h-[520px] max-h-[720px] w-full object-cover group-hover:scale-105 transition duration-700"
+        >
+
+        <div class="absolute bottom-0 inset-x-0 z-20 p-6 text-white">
+
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-sm font-bold">
+            <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
+            إعلان مميز
+          </span>
+
+          <h4 class="mt-4 text-3xl font-extrabold">
+            أحدث فعاليات أسوانية ✨
+          </h4>
+
+          <p class="mt-3 text-white/85 leading-8">
+            اكتشفوا آخر الفعاليات والبازارات واللحظات الجميلة من منتجات سيدات أسوان.
+          </p>
+
+          <a
+            href="stories.html"
+            class="mt-5 inline-flex items-center gap-2 rounded-2xl bg-white text-slate-900 px-5 py-3 font-bold hover:-translate-y-0.5 transition"
+          >
+            شاهد القصص →
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- Gallery -->
+      <div class="lg:col-span-7 reveal">
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+
+          <!-- 12 thumbnails -->
+          <!-- Replace image paths with your real images -->
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-1.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-2.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-3.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-4.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-5.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-6.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-7.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-8.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-9.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-10.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-11.jpg" class="h-40 w-full object-cover">
+          </div>
+
+          <div class="announcement-thumb overflow-hidden rounded-[1.5rem] bg-white shadow-soft border border-orange-100 card-border">
+            <img src="imgs/announcements/announce-12.jpg" class="h-40 w-full object-cover">
+          </div>
+
+        </div>
+
       </div>
+
     </div>
 
-    <div id="eventsTrack" class="slider-track flex gap-5 overflow-x-auto pb-4 no-scrollbar">
-      <article class="min-w-[300px] md:min-w-[340px] bg-white rounded-[1.75rem] overflow-hidden shadow-soft border border-orange-100 card-border">
-        <img src="imgs/ramadan-bazar.jpg" alt="Bazaar 1" class="h-52 w-full object-cover">
-        <div class="p-5">
-          <p class="text-sm text-orange-600 font-bold">Bazaar</p>
-          <h4 class="text-xl font-extrabold text-slate-900 mt-1">Ramadan Bazaar</h4>
-          <p class="text-slate-600 mt-3 leading-7">عرض منتجات رمضانية، تذوق مباشر، وتعريف بالهوية المحلية.</p>
-        </div>
-      </article>
-
-      <article class="min-w-[300px] md:min-w-[340px] bg-white rounded-[1.75rem] overflow-hidden shadow-soft border border-orange-100 card-border">
-        <img src="imgs/local-market.jpg" alt="Event 2" class="h-52 w-full object-cover">
-        <div class="p-5">
-          <p class="text-sm text-orange-600 font-bold">Event</p>
-          <h4 class="text-xl font-extrabold text-slate-900 mt-1">Local Women’s Market</h4>
-          <p class="text-slate-600 mt-3 leading-7">دعم وتمكين سيدات أسوان من خلال عرض منتجاتهن أمام الجمهور.</p>
-        </div>
-      </article>
-
-      <article class="min-w-[300px] md:min-w-[340px] bg-white rounded-[1.75rem] overflow-hidden shadow-soft border border-orange-100 card-border">
-        <img src="imgs/handmade-bazar.jpg" alt="Bazaar 3" class="h-52 w-full object-cover">
-        <div class="p-5">
-          <p class="text-sm text-orange-600 font-bold">Bazaar</p>
-          <h4 class="text-xl font-extrabold text-slate-900 mt-1">Heritage & Handmade Fair</h4>
-          <p class="text-slate-600 mt-3 leading-7">ركن للمشغولات اليدوية والمنتجات التراثية والهدايا.</p>
-        </div>
-      </article>
-
-      <article class="min-w-[300px] md:min-w-[340px] bg-white rounded-[1.75rem] overflow-hidden shadow-soft border border-orange-100 card-border">
-        <img src="https://images.unsplash.com/photo-1481931715705-36f5f79fdf8a?auto=format&fit=crop&w=1200&q=80" alt="Event 4" class="h-52 w-full object-cover">
-        <div class="p-5">
-          <p class="text-sm text-orange-600 font-bold">Event</p>
-          <h4 class="text-xl font-extrabold text-slate-900 mt-1">Community Pop-up Day</h4>
-          <p class="text-slate-600 mt-3 leading-7">تجربة بسيطة ومباشرة للتعرف على المنتجات والطلبات الخاصة.</p>
-        </div>
-      </article>
-    </div>
   </section>
 
+  <!-- Story -->
   <section id="story" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-    <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+
+    <div class="grid lg:grid-cols-2 gap-8">
+
       <div class="reveal bg-white rounded-[2rem] p-8 shadow-soft border border-orange-100 card-border">
+
         <p class="text-orange-600 font-bold">عن أسوانية</p>
-        <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">منتجات أصيلة من قلب أسوان</h3>
+
+        <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">
+          منتجات أصيلة من قلب أسوان
+        </h3>
 
         <div class="mt-6 rounded-2xl bg-orange-50 p-5 border border-orange-100 text-slate-700 leading-8 text-lg">
           أسوانية… حكاية اتولدت في قلب أسوان 🌴<br><br>
-          سيدات قررن يحوّلوا بيوتهم لمصدر رزق، ويصنعوا بإيديهم منتجات طبيعية مليانة حب وشغف 💛<br>
-          كل منتج وراه إيد ست قوية وحلم بيكبر يوم بعد يوم 👑✨
+          سيدات قررن يحوّلوا بيوتهم لمصدر رزق،
+          ويصنعوا بإيديهم منتجات طبيعية مليانة حب وشغف 💛
         </div>
+
       </div>
 
-      <div class="reveal rounded-[2rem] p-8 bg-gradient-to-br from-orange-500 via-amber-400 to-orange-400 text-white shadow-glow relative overflow-hidden">
-        <div class="absolute -top-10 -left-10 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="reveal rounded-[2rem] p-8 bg-gradient-to-br from-orange-500 via-amber-400 to-orange-400 text-white shadow-glow">
 
-        <div class="relative">
-          <h3 class="text-3xl font-extrabold">الرؤية / الرسالة / الأهداف</h3>
+        <h3 class="text-3xl font-extrabold">الرؤية / الرسالة / الأهداف</h3>
 
-          <div class="mt-8 space-y-6">
-            <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
-              <h4 class="text-xl font-extrabold mb-2">الرؤية</h4>
-              <p class="text-lg leading-8">
-                أن تصبح أسوانية علامة رائدة في تقديم المنتجات الطبيعية والتراثية من صعيد مصر، وأن تصل بمنتجات السيدات إلى كل بيت داخل مصر وخارجها.
-              </p>
-            </div>
+        <div class="mt-8 space-y-6">
 
-            <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
-              <h4 class="text-xl font-extrabold mb-2">الرسالة</h4>
-              <p class="text-lg leading-8">
-                تمكين السيدات اقتصاديًا من خلال إنتاج وتسويق منتجات عالية الجودة، مع الحفاظ على التراث المحلي وتحويله إلى فرص عمل حقيقية.
-              </p>
-            </div>
+          <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
+            <h4 class="text-xl font-extrabold mb-2">الرؤية</h4>
 
-            <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
+            <p class="text-lg leading-8">
+             أن تصبح أسوانية علامة رائدة في تقديم المنتجات الطبيعية والتراثية من صعيد مصر، وأن تصل بمنتجات السيدات إلى كل بيت داخل مصر وخارجها.
+            </p>
+          </div>
+
+          <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
+            <h4 class="text-xl font-extrabold mb-2">الرسالة</h4>
+
+            <p class="text-lg leading-8">
+             تمكين السيدات اقتصاديًا من خلال إنتاج وتسويق منتجات عالية الجودة، مع الحفاظ على التراث المحلي وتحويله إلى فرص عمل حقيقية.
+            </p>
+          </div>
+          <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
               <h4 class="text-xl font-extrabold mb-3">الأهداف</h4>
               <ol class="space-y-3 text-lg leading-8 list-decimal list-inside">
                 <li>دعم السيدات في إنشاء وتطوير مشاريعهن من داخل بيوتهن.</li>
@@ -373,93 +554,103 @@
                 <li>بناء براند قوي يجمع بين الجودة والأصالة والأثر الاجتماعي.</li>
               </ol>
             </div>
-          </div>
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
     <div class="rounded-[2rem] bg-slate-950 text-white p-8 md:p-12 shadow-glow overflow-hidden relative card-border">
-      <div class="absolute -left-16 -top-16 w-48 h-48 bg-orange-500/20 rounded-full blur-3xl"></div>
-      <div class="absolute -right-16 -bottom-16 w-48 h-48 bg-amber-400/20 rounded-full blur-3xl"></div>
 
       <div class="relative grid lg:grid-cols-2 gap-8 items-center">
+
         <div class="reveal">
-          <h3 class="text-3xl md:text-4xl font-extrabold">جاهز تطلب من أسوانية؟</h3>
+
+          <h3 class="text-3xl md:text-4xl font-extrabold">
+            جاهز تطلب من أسوانية؟
+          </h3>
+
           <p class="mt-4 text-slate-300 text-lg leading-8">
-            ابعت رسالة الآن واحصل على التفاصيل والأسعار والكمية المناسبة بشكل سريع وسهل.
+            ابعت رسالة الآن واحصل على التفاصيل والأسعار بسهولة.
           </p>
+
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 lg:justify-end reveal">
-          <button onclick="openWhatsApp('مرحبًا، أريد الطلب من أسوانية وأحتاج معرفة التفاصيل والأسعار.')" class="rounded-2xl bg-orange-500 px-6 py-4 font-bold text-white hover:bg-orange-600 hover:-translate-y-1 transition shadow-glow">
+
+          <button
+            onclick="openWhatsApp('مرحبًا، أريد الطلب من أسوانية.')"
+            class="rounded-2xl bg-orange-500 px-6 py-4 font-bold text-white hover:bg-orange-600 hover:-translate-y-1 transition shadow-glow"
+          >
             اطلب الآن عبر واتساب
           </button>
-          <a href="#home" class="rounded-2xl bg-white/10 px-6 py-4 font-bold text-white hover:bg-white/15 hover:-translate-y-1 transition text-center">
-            رجوع للأعلى
-          </a>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+  <!-- Footer -->
   <footer class="border-t border-orange-100 bg-white/60">
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
-      <p class="text-slate-600">© <span id="year"></span> أسوانية🧡 — من قلب أسوان لحد بيتك</p>
+
+      <p class="text-slate-600">
+        © <span id="year"></span> أسوانية🧡 — من قلب أسوان لحد بيتك
+      </p>
+
       <div class="flex items-center gap-3">
-        <a href="https://instagram.com/yourpage" target="_blank" rel="noopener" class="text-slate-500 hover:text-orange-600 transition">Instagram</a>
-        <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" class="text-slate-500 hover:text-orange-600 transition">Facebook</a>
-        <a href="https://wa.me/201090133710" target="_blank" rel="noopener" class="text-slate-500 hover:text-orange-600 transition">WhatsApp</a>
+        <a href="#" class="text-slate-500 hover:text-orange-600 transition">Instagram</a>
+        <a href="#" class="text-slate-500 hover:text-orange-600 transition">Facebook</a>
+        <a href="#" class="text-slate-500 hover:text-orange-600 transition">WhatsApp</a>
       </div>
+
     </div>
+
   </footer>
 
-  <button onclick="openWhatsApp('مرحبًا، أريد الاستفسار عن منتجات أسوانية.')"
-          class="fixed bottom-5 left-5 z-50 w-14 h-14 rounded-full bg-green-500 text-white shadow-lg flex items-center justify-center hover:scale-110 transition animate-pulseSoft"
-          aria-label="WhatsApp">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-      <path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l.9-4.1A8 8 0 1 1 20 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M9.2 8.7c.2-.5.4-.5.7-.5h.5c.2 0 .5 0 .6.4l.8 1.9c.1.3 0 .6-.2.8l-.5.6c-.1.2-.2.4 0 .7.3.6 1.1 1.8 2.4 2.4.4.2.6.1.8-.1l.8-1c.2-.2.4-.2.7-.1l1.8.9c.3.2.4.4.3.7-.2.7-.8 1.4-1.6 1.5-1.1.1-2.4-.3-4.2-1.5-1.7-1.2-2.8-2.7-3.5-4.2-.5-1.2-.5-2.1-.1-3Z" fill="currentColor"/>
-    </svg>
+  <!-- Floating WhatsApp -->
+  <button
+    onclick="openWhatsApp('مرحبًا، أريد الاستفسار عن منتجات أسوانية.')"
+    class="fixed bottom-5 left-5 z-50 w-14 h-14 rounded-full bg-green-500 text-white shadow-lg flex items-center justify-center hover:scale-110 transition animate-pulseSoft"
+  >
+    💬
   </button>
 
   <script>
+
     const phoneNumber = "201090133710";
 
     function openWhatsApp(message) {
       const encodedMessage = encodeURIComponent(message);
       const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-      window.open(url, "_blank", "noopener,noreferrer");
+      window.open(url, "_blank");
     }
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-    const track = document.getElementById("eventsTrack");
-    const prevBtn = document.getElementById("prevEvent");
-    const nextBtn = document.getElementById("nextEvent");
-
-    function scrollEvents(amount) {
-      track.scrollBy({ left: amount, behavior: "smooth" });
-    }
-
-    prevBtn.addEventListener("click", () => scrollEvents(-360));
-    nextBtn.addEventListener("click", () => scrollEvents(360));
-
-    let autoScroll = setInterval(() => scrollEvents(360), 4500);
-
-    track.addEventListener("mouseenter", () => clearInterval(autoScroll));
-    track.addEventListener("mouseleave", () => {
-      autoScroll = setInterval(() => scrollEvents(360), 4500);
+    document.querySelectorAll(".reveal").forEach(el => {
+      observer.observe(el);
     });
+
   </script>
+
 </body>
 </html>
